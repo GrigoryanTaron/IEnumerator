@@ -75,15 +75,20 @@ public static class Extention
         }
         return list1;
     }
+    public static IEnumerable<int> _First(this IEnumerable<int> source)
+    {
+        if (source == null)
+        {
+           throw new ArgumentNullException("null");
+        }
+        foreach(var item in source)
+        {
+            yield return item;
+            yield break;
+        }
+    }
 
 
-    //TO DO
-    //public static IEnumerable<int> _Select(this IEnumerable<int> source, Func<int, int> selector)
-    //{
-    //    if (source == null) throw new ArgumentExeptionNull("source");
-    //    if (selector == null) throw new ArgumentExeptionNull("selector");
 
-    //    return new WhereSelectEnumerableIterator<TSource, TResult>(source, null, selector);
-    //}
 }
 

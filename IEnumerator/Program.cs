@@ -44,6 +44,11 @@ namespace IEnumerator
             {
                 Console.WriteLine($"{item}");
             }
+            var res6 = res.Test(1).Div(2)._First();
+            foreach (int item in res6)
+            {
+                Console.WriteLine($"{item}");
+            }
         }
     }
 
